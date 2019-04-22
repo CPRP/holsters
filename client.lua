@@ -5,6 +5,7 @@ local default_weapon = GetHashKey('weapon_combatpistol') -- The weapon that the 
 local enabled = false
 local ped = nil -- Cache the ped
 local currentPedData = nil -- Config data for the current ped
+
 -- Slow loop to determine the player ped and if it is of interest to the algorithm
 -- This only needs to be run every 5 seconds or so, as ped changes are infrequent
 Citizen.CreateThread(function()
@@ -34,6 +35,8 @@ Citizen.CreateThread(function()
       current_weapon = GetSelectedPedWeapon(ped)
       if current_weapon ~= last_weapon then -- The weapon in hand has changed, so we need to check for holsters
         Citizen.Trace('The weapon has changed!')
+
+        -- TODO More stuff to actually change the drawables, need to actually test that the code so far even passes on FiveM
       end
     end
   end
