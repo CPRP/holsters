@@ -10,7 +10,7 @@ local currentPedData = nil -- Config data for the current ped
 -- This only needs to be run every 5 seconds or so, as ped changes are infrequent
 Citizen.CreateThread(function()
   while true do
-    local ped = GetPlayerPed(-1)
+    ped = GetPlayerPed(-1)
     local ped_hash = GetEntityModel(ped)
     local enable = false -- We updated the 'enabled' variable in the upper scope with this at the end
     -- Loop over peds in the config
@@ -35,7 +35,7 @@ Citizen.CreateThread(function()
       current_weapon = GetSelectedPedWeapon(ped)
       if current_weapon ~= last_weapon then -- The weapon in hand has changed, so we need to check for holsters
         Citizen.Trace('The weapon has changed!')
-
+        Citizen.Wait(0)
         -- TODO More stuff to actually change the drawables, need to actually test that the code so far even passes on FiveM
       end
     end
