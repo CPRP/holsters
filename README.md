@@ -45,7 +45,7 @@ The "drawable ID" indicates which drawable to use. You must tell the config whic
 The configuration follows a common format:
 ```lua
 ["ped name"] = {
-  ["variations"] = {
+  ["components"] = {
     [component ID] = {
       [holster with handgun] = empty holster,
     }
@@ -56,7 +56,7 @@ The configuration follows a common format:
 Here is an example for some of the EUP holsters in the male ped, where multiple different holsters are specified:
 ```lua
 ["mp_m_freemode_01"] = { -- Make sure to use the full ped name
-      ["variations"] = {
+      ["components"] = {
         [7] = { -- This is the 'Neck' category
           [1] = 3, -- Drawable '3' is the empty version of drawable '1'
           [6] = 5,

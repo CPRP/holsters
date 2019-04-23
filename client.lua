@@ -41,7 +41,7 @@ Citizen.CreateThread(function()
       current_weapon = GetSelectedPedWeapon(ped)
       if current_weapon ~= last_weapon then -- The weapon in hand has changed, so we need to check for holsters
         
-        for component, holsters in pairs(currentPedData.variations) do
+        for component, holsters in pairs(currentPedData.components) do
           local holsterDrawable = GetPedDrawableVariation(ped, component) -- Current drawable of this component
           local holsterTexture = GetPedTextureVariation(ped, component) -- Current texture, we need to preserve this
 
