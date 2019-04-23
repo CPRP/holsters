@@ -1,7 +1,7 @@
 # Configuration File
 This resource comes with a basic default configuration that is suited to the default ped models. Drawables often vary between different peds and the script has no way of telling which drawables contain the holster. If you are using custom ped models, it is likely that you will need to configure it.
 
-This configuration file relies on the use of [Lua tables](http://lua-users.org/wiki/TablesTutorial), 
+This configuration file relies on the use of [Lua tables](http://lua-users.org/wiki/TablesTutorial).
 
 #### Adding a holster
 
@@ -56,17 +56,17 @@ This configuration file relies on the use of [Lua tables](http://lua-users.org/w
     Here is an example for some of the EUP holsters in the male ped, where multiple different holsters are specified:
     ```lua
     ["mp_m_freemode_01"] = { -- Make sure to use the full ped name
-          ["components"] = {
-            [7] = { -- This is the 'Neck' category
-              [1] = 3, -- Drawable '3' is the empty version of drawable '1'
-              [6] = 5,
-              [8] = 2,
-              [42] = 43,
-              [110] = 111,
-              [119] = 120
-            }
-          }
-        },
+      ["components"] = {
+        [7] = { -- This is the 'Neck' category
+          [1] = 3, -- Drawable '3' is the empty version of drawable '1'
+          [6] = 5,
+          [8] = 2,
+          [42] = 43,
+          [110] = 111,
+          [119] = 120
+        }
+      }
+    },
     ```
 
 The resource comes with a fully working config file that is ready for you to edit. Take a look at it [here](config.lua)  to see more examples of how the configuration works. 
