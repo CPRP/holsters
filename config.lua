@@ -1,3 +1,8 @@
+-- Created by Jamelele, April 2019
+
+-- Take a look at the documentation for configuring:
+-- https://github.com/Jamelele/holsters#configuration-file 
+
 config = {
   ["peds"] = {
     ["mp_m_freemode_01"] = { -- Male multiplayer ped
