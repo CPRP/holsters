@@ -40,7 +40,7 @@ Use this table to translate the various categories.
 
 Most of the holsters will either be in the Neck (7) or Accessory (9) categories.
 
-The "drawable ID" indicates which drawable to use. You must tell the config which two holsters correspond to each other
+The "drawable ID" indicates which drawable to use. You must tell the config which two holsters correspond to each other.
 
 The configuration follows a common format:
 ```lua
@@ -69,4 +69,4 @@ Here is an example for some of the EUP holsters in the male ped, where multiple 
     },
 ```
 
-The resource comes with a fully working that is ready for you to edit. Take a look at it [here](config.lua)  to see more examples of how the configuration works 
+The resource comes with a fully working config file that is ready for you to edit. Take a look at it [here](config.lua)  to see more examples of how the configuration works. 
