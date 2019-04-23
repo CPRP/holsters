@@ -35,9 +35,10 @@ Citizen.CreateThread(function()
       current_weapon = GetSelectedPedWeapon(ped)
       if current_weapon ~= last_weapon then -- The weapon in hand has changed, so we need to check for holsters
         Citizen.Trace('The weapon has changed!')
-        Citizen.Wait(0)
+        last_weapon = current_weapon
         -- TODO More stuff to actually change the drawables, need to actually test that the code so far even passes on FiveM
       end
     end
+    Citizen.Wait(0)
   end
 end)
