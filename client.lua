@@ -1,7 +1,5 @@
-local config_file = LoadResourceFile(GetCurrentResourceName(), 'holsters.json')
-local config = json.decode(config_file)
 local default_weapon = GetHashKey('weapon_combatpistol') -- The weapon that the script looks for if one isn't specified for a holster, this is the glock.
-
+--local config = config -- Save configuration from global scope here
 local enabled = false
 local ped = nil -- Cache the ped
 local currentPedData = nil -- Config data for the current ped
@@ -14,7 +12,7 @@ Citizen.CreateThread(function()
     local ped_hash = GetEntityModel(ped)
     local enable = false -- We updated the 'enabled' variable in the upper scope with this at the end
     -- Loop over peds in the config
-    for ped,data in pairs(config) do
+    for ped, data in pairs(config) do
       if GetHashKey(ped) == ped_hash then 
         enable = true -- We now want to make sure that 'enabled' will be true
         currentPedData = data
