@@ -16,4 +16,4 @@ Yes, the default config file is preconfigured with the default holsters for both
 
 ## Configuration
 
-- [Configuration documentation](CONFIGURATION.md)
+- [Configuration documentation](https://github.com/Jamelele/holsters/wiki/Configuration-Guide)
