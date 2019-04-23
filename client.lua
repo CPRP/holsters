@@ -21,7 +21,7 @@ Citizen.CreateThread(function()
     local ped_hash = GetEntityModel(ped)
     local enable = false -- We updated the 'enabled' variable in the upper scope with this at the end
     -- Loop over peds in the config
-    for ped, data in pairs(config) do
+    for ped, data in pairs(config.peds) do
       if GetHashKey(ped) == ped_hash then 
         enable = true -- We now want to make sure that 'enabled' will be true
         currentPedData = data
