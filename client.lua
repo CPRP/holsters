@@ -4,7 +4,7 @@
 -- If you're looking to edit the configuration, go to config.lua
 
 local default_weapon = GetHashKey('weapon_combatpistol') -- The weapon that the script looks for if one isn't specified for a holster, this is the glock.
-local enabled = false
+local active = false
 local ped = nil -- Cache the ped
 local currentPedData = nil -- Config data for the current ped
 
@@ -32,7 +32,7 @@ Citizen.CreateThread(function()
         break
       end
     end
-    enabled = enable
+    active = enable
     Citizen.Wait(5000)
   end
 end)
@@ -41,7 +41,7 @@ end)
 local last_weapon = nil -- Variable used to save the weapon from the last tick
 Citizen.CreateThread(function()
   while true do
-    if enabled then -- A ped in the config is in use, so we start checking
+    if active then -- A ped in the config is in use, so we start checking
       current_weapon = GetSelectedPedWeapon(ped)
       if current_weapon ~= last_weapon then -- The weapon in hand has changed, so we need to check for holsters
         
