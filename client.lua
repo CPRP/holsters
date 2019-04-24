@@ -50,18 +50,14 @@ Citizen.CreateThread(function()
           local holsterTexture = GetPedTextureVariation(ped, component) -- Current texture, we need to preserve this
 
           local emptyHolster = holsters[holsterDrawable] -- The corresponding empty holster
-          if emptyHolster then
-            if current_weapon == default_weapon then
-              SetPedComponentVariation(ped, component, emptyHolster, holsterTexture, 0)
-            end
+          if emptyHolster and current_weapon == default_weapon then
+            SetPedComponentVariation(ped, component, emptyHolster, holsterTexture, 0)
             break
           end
 
           local filledHolster = table_invert(holsters)[holsterDrawable] -- The corresponding filled holster
-          if filledHolster then
-            if current_weapon ~= default_weapon and last_weapon == default_weapon then -- The gun needs to be put back in the holster
-              SetPedComponentVariation(ped, component, filledHolster, holsterTexture, 0)
-            end
+          if filledHolster and current_weapon ~= default_weapon and last_weapon == default_weapon then
+            SetPedComponentVariation(ped, component, filledHolster, holsterTexture, 0)
             break
           end
         end
