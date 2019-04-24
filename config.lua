@@ -4,6 +4,7 @@
 -- https://github.com/Jamelele/holsters#configuration-file 
 
 config = {
+  ["weapon"] = "WEAPON_COMBATPISTOL", -- The weapon that the script detects as in or out of the holster
   ["peds"] = {
     ["mp_m_freemode_01"] = { -- Male multiplayer ped
       ["components"] = {
