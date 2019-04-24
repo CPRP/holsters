@@ -1,15 +1,15 @@
 -- Created by Jamelele, April 2019
 
 -- Take a look at the documentation for configuring:
--- https://github.com/Jamelele/holsters#configuration-file 
+-- https://github.com/Jamelele/holsters/wiki/Configuration-Guide
 
 config = {
   ["weapon"] = "WEAPON_COMBATPISTOL", -- The weapon that the script detects as in or out of the holster
   ["peds"] = {
     ["mp_m_freemode_01"] = { -- Male multiplayer ped
       ["components"] = {
-        [7] = { -- Simple Trainer: 'Teeth', Lambda: 'Neck'
-          [1] = 3,
+        [7] = { -- Component ID
+          [1] = 3, -- Drawable ID, can specify multiple, separated by comma and or line breaks
           [6] = 5,
           [8] = 2,
           [42] = 43,
@@ -19,8 +19,8 @@ config = {
       }
     },
     ["mp_f_freemode_01"] = { -- Female multiplayer ped
-      ["components"] = { -- Simple Trainer: 'Teeth', Lambda: 'Neck'
-        [7] = {
+      ["components"] = {
+        [7] = { -- Component ID
           [1] = 3,
           [6] = 5,
           [8] = 2,
