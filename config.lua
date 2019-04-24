@@ -29,6 +29,7 @@ config = {
       }
     },
     ["s_m_y_hwaycop_01"] = {
+      ["enabled"] = true, -- true/false. Optional field, the ped will default as enabled
       ["components"] = {
         [9] = {
           [1] = 0

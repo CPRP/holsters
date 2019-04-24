@@ -27,7 +27,11 @@ Citizen.CreateThread(function()
     -- Loop over peds in the config
     for ped, data in pairs(config.peds) do
       if GetHashKey(ped) == ped_hash then 
-        enable = true -- We now want to make sure that 'enabled' will be true
+        if data.enabled ~= nil then -- Optional 'enabled' option
+          enable = data.enabled
+        else 
+          enable = true -- By default, the ped will have its holsters enabled
+        end
         currentPedData = data
         break
       end
