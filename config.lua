@@ -8,7 +8,7 @@ config = {
   ["peds"] = {
     ["mp_m_freemode_01"] = { -- Male multiplayer ped
       ["components"] = {
-        [7] = { -- Component ID
+        [7] = { -- Component ID, "Neck" or "Teeth" category
           [1] = 3, -- Drawable ID, can specify multiple, separated by comma and or line breaks
           [6] = 5,
           [8] = 2,
@@ -23,7 +23,7 @@ config = {
     },
     ["mp_f_freemode_01"] = { -- Female multiplayer ped
       ["components"] = {
-        [7] = { -- Component ID
+        [7] = { -- Component ID, "Neck" or "Teeth" category
           [1] = 3,
           [6] = 5,
           [8] = 2,
