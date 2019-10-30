@@ -19,3 +19,8 @@ Yes, the default config file is preconfigured with the default holsters for both
 ## Configuration
 
 - [Configuration documentation](https://github.com/Jamelele/holsters/wiki/Configuration-Guide)
+
+## Commands
+
+### /holsters <on/off>
+Toggles the resource on and off, if `on/off` is not specified then it will toggle.
