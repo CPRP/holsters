@@ -7,7 +7,8 @@
 -- DO NOT CHANGE ANY OF THESE VALUES! Go to config.lua for configuration.
 -- DO NOT CHANGE ANY OF THESE VALUES! Go to config.lua for configuration.
 
-local default_weapon = GetHashKey(config.weapon) -- The weapon that the script looks for if one isn't specified for a holster, this is the glock.
+local config = config
+local default_weapon = GetHashKey(config.weapon) -- The weapon that the script looks for.
 local active = false
 local ped = nil -- Cache the ped
 local currentPedData = nil -- Config data for the current ped
