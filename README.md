@@ -1,5 +1,5 @@
 # Holsters
-This is a resource for FiveM which is inspired by the [Cop Holster](https://www.lcpdfr.com/files/file/8017-cop-holster/) script on LSPDFR. It implements dynamic holsters for all players by removing the handgun from the holster when it is drawn. It is highly configurable and can support multiple peds. It even supports EUP peds and the multiple holsters it has to offer.
+This is a resource for the Grand Theft Auto V multiplayer mod, [FiveM](https://fivem.net), which is inspired by the [Cop Holster](https://www.lcpdfr.com/files/file/8017-cop-holster/) script on LSPDFR. It implements dynamic holsters for all players by removing the handgun from the holster when it is drawn. It is highly configurable and can support multiple peds. It even supports EUP peds and the multiple holsters it has to offer.
 
 <img src="https://media.giphy.com/media/loGRS56xWOA5fEy5OF/giphy.gif" width="185.5" height="240" />
 
