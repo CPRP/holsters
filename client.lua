@@ -9,11 +9,11 @@
 
 local config = config
 local default_weapon = GetHashKey(config.weapon) -- The weapon that the script looks for.
+local enabled = true
 local active = false
 local ped = nil -- Cache the ped
 local currentPedData = nil -- Config data for the current ped
 
--- Helper function to invert tables
 function table_invert(t)
   local s={}
   for k,v in pairs(t) do
@@ -22,8 +22,13 @@ function table_invert(t)
   return s
 end
 
+function drawNotification(text)
+  SetNotificationTextEntry("STRING")
+  AddTextComponentSubstringPlayerName(text)
+  DrawNotification(false, false)
+end
+
 -- Slow loop to determine the player ped and if it is of interest to the algorithm
--- This only needs to be run every 5 seconds or so, as ped changes are infrequent
 Citizen.CreateThread(function()
   while true do
     ped = GetPlayerPed(-1)
@@ -49,7 +54,7 @@ end)
 local last_weapon = nil -- Variable used to save the weapon from the last tick
 Citizen.CreateThread(function()
   while true do
-    if active then -- A ped in the config is in use, so we start checking
+    if active and enabled then -- A ped in the config is in use, so we start checking
       current_weapon = GetSelectedPedWeapon(ped)
       if current_weapon ~= last_weapon then -- The weapon in hand has changed, so we need to check for holsters
         for component, holsters in pairs(currentPedData.components) do
@@ -74,3 +79,22 @@ Citizen.CreateThread(function()
     Citizen.Wait(200)
   end
 end)
+
+local messages = {
+  [true] = 'Dynamic holsters enabled',
+  [false] = 'Dynamic holsters disabled'
+}
+
+RegisterCommand('holsters', function(source, args)
+  if not args[1] then
+    enabled = not enabled
+  end
+
+  if args[1] == 'on' then
+    enabled = true
+  elseif args[1] == 'off' then
+    enabled = false
+  end
+
+  drawNotification('~p~' .. messages[enabled])
+end, false)
