@@ -3,6 +3,9 @@ This is a resource for the Grand Theft Auto V multiplayer mod, [FiveM](https://f
 
 <img src="https://media.giphy.com/media/loGRS56xWOA5fEy5OF/giphy.gif" width="185.5" height="240" />
 
+# License
+You can edit and redistribute under the terms in the `LICENSE` file. Even though this resource is relatively simple and condensed, I've put in a lot of work to make it so. All I ask is that you don't steal my work and take credit for it; it's very simple.
+
 ## Information
 ### How does this work?
 Ped models in Grand Theft Auto V have different textures called 'drawables'. Many of the default cop models and community made models have 2 drawables for the holster, where one is empty and the other has a handgun in it. This script utilises those textures by flawlessly and automatically changing them when the player has a handgun drawn. 
