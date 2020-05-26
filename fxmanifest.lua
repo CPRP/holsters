@@ -19,9 +19,12 @@ game 'gta5'
 name 'Holsters'
 description 'Removes handguns from holsters when a weapon is drawn'
 author 'Jamelele'
-version '1.0.3'
+version 'v1.0.3'
+version_check 'yes' -- Set this to 'no' if you don't want update checks
 
 client_scripts {
   'config.lua',
   'client.lua'
 }
+
+server_script 'server.lua'
