@@ -25,7 +25,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 local config = config
 local enabled = true
 local active = false
-local ped = nil -- Cache the ped
+local ped = nil -- The hash of the current ped
 local currentPedData = nil -- Config data for the current ped
 local weapons = { }
 
@@ -48,6 +48,7 @@ function isConfigWeapon(weapon)
   return weapons[weapon] ~= nil
 end
 
+-- Adds the weapon hash to the 'weapons' table, for a given string or 
 local function loadWeapon(weapon)
   if not tonumber(weapon) then -- If not already a hash
     weapon = GetHashKey(weapon)
@@ -60,7 +61,7 @@ if type(config.weapon) == 'table' then
   for _, weapon in ipairs(config.weapon) do
     loadWeapon(weapon)
   end
-else
+else -- Backwards compatibility for old config versions where 'config.weapon' was just a string
   loadWeapon(config.weapon)
 end
 
@@ -121,6 +122,7 @@ local messages = {
   [false] = 'Dynamic holsters disabled'
 }
 
+-- Toggles the script
 RegisterCommand('holsters', function(source, args)
   if not args[1] then
     enabled = not enabled
