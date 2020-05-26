@@ -13,7 +13,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 --]]
 
--- Created by Jamelele, last updated March 2020
+-- Created by Jamelele
 
 -- Take a look at the documentation for configuring:
 -- https://github.com/Jamelele/holsters/wiki/Configuration-Guide
