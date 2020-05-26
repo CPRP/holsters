@@ -50,11 +50,15 @@ end
 
 -- Adds the weapon hash to the 'weapons' table, for a given string or 
 local function loadWeapon(weapon)
+  local hash = weapon
   if not tonumber(weapon) then -- If not already a hash
-    weapon = GetHashKey(weapon)
+    hash = GetHashKey(weapon)
+  end
+  if not IsWeaponValid(hash) then 
+    error('Invalid weapon ' .. tostring(weapon))
   end
   if isConfigWeapon(weapon) then return end -- Don't add duplicate weapons
-  weapons[weapon] = true
+  weapons[hash] = true
 end
 
 if type(config.weapon) == 'table' then
