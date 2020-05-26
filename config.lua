@@ -19,7 +19,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 -- https://github.com/Jamelele/holsters/wiki/Configuration-Guide
 
 config = {
-  ["weapon"] = "WEAPON_COMBATPISTOL", -- The weapon that the script detects as in or out of the holster
+  ["weapon"] = { "WEAPON_PISTOL", "WEAPON_COMBATPISTOL" },
   ["peds"] = {
     ["mp_m_freemode_01"] = { -- Male multiplayer ped
       ["components"] = {
