@@ -48,7 +48,7 @@ function isConfigWeapon(weapon)
   return weapons[weapon] ~= nil
 end
 
--- Adds the weapon hash to the 'weapons' table, for a given string or 
+-- Adds the weapon hash to the 'weapons' table, for a given string or hash
 local function loadWeapon(weapon)
   local hash = weapon
   if not tonumber(weapon) then -- If not already a hash
