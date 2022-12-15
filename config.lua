@@ -19,17 +19,38 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 -- https://github.com/Jamelele/holsters/wiki/Configuration-Guide
 
 config = {
-  ["weapon"] = { "WEAPON_PISTOL", "WEAPON_COMBATPISTOL" },
+  ["weapon"] = { "WEAPON_PISTOL", "WEAPON_COMBATPISTOL", "WEAPON_SNSPISTOL", "WEAPON_APPISTOL" },
   ["peds"] = {
     ["mp_m_freemode_01"] = { -- Male multiplayer ped
       ["components"] = {
         [7] = { -- Component ID, "Neck" or "Teeth" category
-          [1] = 3, -- Drawable ID, can specify multiple, separated by comma and or line breaks
+          [9] = 7, -- Drawable ID, can specify multiple, separated by comma and or line breaks
+          [1] = 3,
           [6] = 5,
           [8] = 2,
-          [42] = 43,
-          [110] = 111,
-          [119] = 120
+          [18] = 19,
+          [19] = 20,
+          [20] = 21,
+          [21] = 22,
+          [26] = 25,
+          [57] = 58,
+          [58] = 59,
+          [62] = 63,
+          [63] = 64,
+          [64] = 65,
+          [65] = 66,
+          [66] = 67,
+          [90] = 91,
+          [92] = 93,
+          [94] = 95,
+          [96] = 97,
+          [98] = 99,
+          [105] = 106,
+          [153] = 154,
+          [165] = 166,
+          [166] = 167,
+          [171] = 172,
+          [172] = 173
         },
         [8] = { 
           [16] = 18
