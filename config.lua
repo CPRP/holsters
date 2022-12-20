@@ -19,41 +19,33 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 -- https://github.com/Jamelele/holsters/wiki/Configuration-Guide
 
 config = {
-  ["weapon"] = { "WEAPON_PISTOL", "WEAPON_COMBATPISTOL", "WEAPON_SNSPISTOL", "WEAPON_APPISTOL" },
+  ["weapon"] = { "WEAPON_PISTOL", "WEAPON_COMBATPISTOL", "WEAPON_SNSPISTOL", "WEAPON_APPISTOL", "WEAPON_PISTOL50", "WEAPON_HEAVYPISTOL", "WEAPON_VINTAGEPISTOL", "WEAPON_MARKSMANPISTOL", "WEAPON_MACHINEPISTOL", "WEAPON_VINTAGEPISTOL", "WEAPON_PISTOL_MK2", "WEAPON_SNSPISTOL_MK2", "WEAPON_FLAREGUN", "WEAPON_STUNGUN", "WEAPON_REVOLVER", "WEAPON_GLOCK17", "WEAPON_DE", "WEAPON_GLOCK17", "WEAPON_M9", "WEAPON_M1911", "WEAPON_FNX45" },
   ["peds"] = {
     ["mp_m_freemode_01"] = { -- Male multiplayer ped
       ["components"] = {
         [7] = { -- Component ID, "Neck" or "Teeth" category
-          [9] = 7, -- Drawable ID, can specify multiple, separated by comma and or line breaks
-          [1] = 3,
-          [6] = 5,
-          [8] = 2,
-          [18] = 19,
-          [19] = 20,
-          [20] = 21,
-          [21] = 22,
-          [26] = 25,
-          [57] = 58,
-          [58] = 59,
-          [62] = 63,
-          [63] = 64,
-          [64] = 65,
-          [65] = 66,
-          [66] = 67,
-          [90] = 91,
-          [92] = 93,
-          [94] = 95,
-          [96] = 97,
-          [98] = 99,
-          [105] = 106,
-          [153] = 154,
-          [165] = 166,
-          [166] = 167,
-          [171] = 172,
-          [172] = 173
+          [1] = 1, -- Drawable ID, can specify multiple, separated by comma and or line breaks
+          [18] = 18,
+          [19] = 19,
+          [20] = 20,
+          [21] = 21,
+          [57] = 57,
+          [58] = 58,
+          [63] = 62,
+          [64] = 66,
+          [67] = 65,
+          [165] = 165,
+          [166] = 166,
+          [172] = 172
         },
         [8] = { 
-          [16] = 18
+          [23] = 23,
+          [24] = 24,
+          [30] = 30,
+          [50] = 50,
+          [56] = 56,
+          [162] = 162,
+          [170] = 170
         }
       }
     },
